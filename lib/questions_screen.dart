@@ -14,7 +14,7 @@ class QuestionsScreen extends StatefulWidget {
 }
 
 class _QuestionsScreenState extends State<QuestionsScreen> {
-  var currentAnswers = questions[0].answers;
+  var currentAnswers = questions[0].getShuffledAnswers();
   @override
   Widget build(context) {
     setState(() {});
