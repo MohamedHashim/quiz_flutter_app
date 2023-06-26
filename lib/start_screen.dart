@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class StartScreen extends StatelessWidget {
-  const StartScreen({super.key});
+  const StartScreen(this.navigateToQuestionsScreen, {super.key});
+
+  final Function() navigateToQuestionsScreen;
 
   // This widget is the root of your application.
   @override
@@ -26,7 +28,7 @@ class StartScreen extends StatelessWidget {
             height: 40,
           ),
           OutlinedButton.icon(
-            onPressed: () {},
+            onPressed: navigateToQuestionsScreen,
             style: OutlinedButton.styleFrom(foregroundColor: Colors.white),
             icon: const Icon(Icons.arrow_right_alt),
             label: const Text(
