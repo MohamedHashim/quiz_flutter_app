@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
 class AnswerButton extends StatelessWidget {
-  const AnswerButton(this.answer, this.onClick, {super.key});
+  AnswerButton(this.answer, this.onClick, {super.key});
   final String answer;
-  final void Function() onClick;
+  void Function() onClick;
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed: () => onClick,
+      onPressed: onClick,
       style: ElevatedButton.styleFrom(
         shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.all(
@@ -21,7 +21,8 @@ class AnswerButton extends StatelessWidget {
       ),
       child: Text(
         answer,
-        style: const TextStyle(fontSize: 22),
+        textAlign: TextAlign.center,
+        style: const TextStyle(fontSize: 18),
       ),
     );
   }
